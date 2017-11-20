@@ -23,7 +23,7 @@ var mazeMap = [
     "******************"
 ];
 
-function prueba(){
+function drawLaberinto(){
     ctx.beginPath();
        
     // Draw walls
@@ -72,7 +72,7 @@ ctx.fillRect(150,30,10,10);
 }
 
 
-
+/*
 function draw() {
     for (var i = 0; i < mazeMap.length; i++) {
         for (var j = 0; j < mazeMap[i].length; j++) {
@@ -100,7 +100,7 @@ function draw() {
     }
 
 }
-
+*/
 function drawplayer() {
     ctx.beginPath();
     ctx.rect(paddleX, paddleY, 10, 10);
@@ -143,9 +143,9 @@ function keyUpHandler(e) {
     }
 }
 
-function drawlaberinto() {
+function game() {
     ctx.clearRect(0, 0, 180, 110);
-    prueba();
+    drawLaberinto();
     drawplayer();
 /*Movimiento de jugador */
     if (rightPressed) {
@@ -163,7 +163,7 @@ function drawlaberinto() {
      
 }
 
-setInterval(drawlaberinto, 50);
+setInterval(game, 50);
 
 
 
